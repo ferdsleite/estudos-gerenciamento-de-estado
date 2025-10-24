@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
-@source inline('{sm:,md:,lg:,xl:,}bg-{red,blue,green,yellow,purple,pink}-{100..900}');
+@source inline('{sm:,md:,lg:,xl:,}bg-{red,sky,green,yellow}-{100..900}');
 
 :root {
   --background: #ffffff;
@@ -28,4 +28,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-display);
+}
+
+@layer components {
+  .input {
+    @apply bg-black/20
+  }
 }
