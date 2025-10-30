@@ -38,6 +38,15 @@ body {
 
   .btn {
     @apply bg-zinc-500 p-4 py-2 rounded-md;
-    @apply hover:bg-zinc-700
+    @apply hover:bg-zinc-700;
+  }
+
+  .btn-info {
+    @apply bg-blue-400 hover:bg-blue-600;
+    @apply px-4 py-2 rounded-md;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 px-4 py-2 rounded-md;
   }
 }
