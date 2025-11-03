@@ -1,6 +1,7 @@
 import Mais from "@/components/basico/Mais";
 import Menos from "@/components/basico/Menos";
 import Valor from "@/components/basico/Valor";
+import CalculoTabuada from "@/components/tabuada/CalculoTabuada";
 import { ContadorProvider } from "@/context/ContadorContext";
 import Link from "next/link";
 
@@ -14,6 +15,7 @@ export default function ExemploBasico() {
                     <Mais />
                 </div>
             </ContadorProvider>
+            <CalculoTabuada />
             <div className="flex justify-end items-end p-6">
                 <Link href="/">
                     Back to Home
