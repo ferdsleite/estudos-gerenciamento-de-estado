@@ -1,11 +1,9 @@
-import capitulos from "@/data/constants/capitulos"
+import CursoContext from "@/context/CursoContext";
+import { useContext } from "react";
 
-interface PlayerProps {
-    titulo: string
-    videoURL: string
-}
-export default function Player( {titulo, videoURL }: PlayerProps) {
-    const aulaAtual = capitulos[0].aulas[0];
+export default function Player() {
+    const { aulaAtual } = useContext(CursoContext);
+
     return (
         <div className="flex flex-col justify-center items-center w-4/5 h-3/5 bg-zinc-700 rounded-lg p-3">
             <span className="font-black text-2xl mb-10">{aulaAtual.titulo}</span>

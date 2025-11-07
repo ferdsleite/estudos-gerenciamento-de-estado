@@ -1,11 +1,12 @@
-
-import capitulos from "@/data/constants/capitulos";
 import Estatisticas from "./Estatisticas";
 import Player from "./Player";
 import CapituloItem from "./CapituloItem";
+import { useContext } from "react";
+import CursoContext from "@/context/CursoContext";
 
 export default function SalaDeAula() {
-    const capituloFake = capitulos;
+    const { capitulos } = useContext(CursoContext);
+
     return (
         <div className="flex">
             <div className="bg-zinc-800 w-96 h-screen overflow-auto">
@@ -15,8 +16,8 @@ export default function SalaDeAula() {
             </div>
             <div className="flex flex-col flex-1 justify-center items-center gap-4 bg-zinc-900">
                 <Estatisticas />
-                <Player titulo="Linguagens Programação" videoURL="https://www.youtube.com/embed/Eb4ZenR9qcY" />
+                <Player />
             </div>
         </div>
-    )
+    );
 }
